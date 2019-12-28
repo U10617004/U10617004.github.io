@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>導盲犬問答手冊</title>
+  <style type='text/css'>
+    body
+    {
+      background:pink;
+      color:white;
+    }
+    div#all
+    {
+      width:800px;
+      margin:auto;
+    }
+    img#picture
+    {
+      width:800px;
+      height:600px;
+    }
+	div#leftArrow
+	{
+	  float:left;	
+	  margin-top:70px;
+	}
+	div#rightArrow
+	{
+	  float:right;	
+	  margin-top:70px;
+	}	
+  </style>
+
+  <script type="text/javascript">
+        var currentPage=1;
+	var totalPages=10;
+        
+	function nextPage()
+	{
+	  if (currentPage<totalPages)
+	  {
+	    currentPage++;
+	    document.getElementById("picture").src= currentPage +".png";
+	  }
+	  hideArrow();
+        }
+	function prevPage()
+	{
+	  if (currentPage>1)
+	  {
+	    currentPage--;
+	    document.getElementById("picture").src= currentPage + ".png";
+	  }
+	  hideArrow();
+        }
+	function hideArrow()
+	{
+		if (currentPage==1)
+		{
+		   document.getElementById("leftArrow").style.visibility="hidden";
+		}
+		else
+		{
+		   document.getElementById("leftArrow").style.visibility="visible";	
+		}
+		if (currentPage==totalPages)
+		{
+		   document.getElementById("rightArrow").style.visibility="hidden";
+		}
+		else
+		{
+		   document.getElementById("rightArrow").style.visibility="visible";	
+		}
+	}
+  </script>
+</head>
+
+<body onLoad="hideArrow();">
+  <div id="all">
+      <div id="pictureContainer">
+        <img src="1.png" id="picture">
+      </div>
+      <div id="arrows">
+         <div id="leftArrow" onclick="prevPage();">
+            <img src="leftArrow.png">
+         </div>
+         <div id="rightArrow" onclick="nextPage();">
+           <img src="rightArrow.png">
+         </div>
+         </div>
+       <div>
+<audio src="How_it_Began.mp3" id="aud" autoplay="autoplay" controls="controls" preload="auto"></audio>
+      </div>
+  </div>
+</body>
+</html>
