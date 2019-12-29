@@ -95,36 +95,6 @@ div#text3
 </style>
 
 
-<script type="text/javascript">
-
-var opacity=0.2;
-var intervalID;
-
-function load()
-{
-    //document.getElementById("bgMusic").src = "piano.mp3";
-    document.getElementById("voi").play();
-    document.getElementById("menu").style.opacity = opacity;
-    document.getElementById("text1").style.opacity = opacity;
-    document.getElementById("text2").style.opacity = opacity;
-    //document.getElementById("text3").style.opacity = opacity;
-    intervalID = setInterval("fadeIn();",100);
-}
-function fadeIn()
-{
-    opacity+=0.035;
-    document.getElementById("menu").style.opacity = opacity;
-    document.getElementById("text1").style.opacity = opacity;
-    document.getElementById("text2").style.opacity = opacity;
-    //document.getElementById("text3").style.opacity = opacity;
-    if(opacity>=1)
-    {
-        intervalID = clearInterval();
-    }
-}
-</script>
-
-
 </head>
 <body onload = "load();">
 <div id="all">
@@ -174,9 +144,38 @@ function fadeIn()
     	<br>製作:學習與媒材設計學系110級 導盲犬小組
     </div>
     <div>
-        <audio autoplay id="voi" preload = "auto" src = "piano.mp3" controls = "hidden"></audio>
+        <audio autoplay id="voi" preload = "auto" src = "piano.mp3" ></audio>
     </div>
 </div>
+	
+<script type="text/javascript">
+
+var opacity=0.2;
+var intervalID;
+
+function load()
+{
+    //document.getElementById("bgMusic").src = "piano.mp3";
+    document.getElementById("voi").play();
+    document.getElementById("menu").style.opacity = opacity;
+    document.getElementById("text1").style.opacity = opacity;
+    document.getElementById("text2").style.opacity = opacity;
+    //document.getElementById("text3").style.opacity = opacity;
+    intervalID = setInterval("fadeIn();",100);
+}
+function fadeIn()
+{
+    opacity+=0.035;
+    document.getElementById("menu").style.opacity = opacity;
+    document.getElementById("text1").style.opacity = opacity;
+    document.getElementById("text2").style.opacity = opacity;
+    //document.getElementById("text3").style.opacity = opacity;
+    if(opacity>=1)
+    {
+        intervalID = clearInterval();
+    }
+}
+</script>
 		
 </body>
 </html>
