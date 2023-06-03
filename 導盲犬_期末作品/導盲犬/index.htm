@@ -1,0 +1,180 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>認識導盲犬</title>
+<style type="text/css">
+body
+{
+	font-family: "Microsoft JhengHei", Times, serif;
+	background:#AF8864;
+	max-width: 1500px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+div#all
+{
+	width: 1500px;
+	margin:auto;
+}
+div#banner
+{
+	margin-top: -21px;
+	background-image: url('banner.jpg');
+	height:579px;
+}
+div#menu
+{
+	background-image: url('menu.jpg');
+	height: 198px;
+	font-size:16px;
+}
+div#footer
+{
+	background-image: url('footer.jpg');
+	height: 70px;
+	color:#3F2C1C;
+	font-family: "Microsoft JhengHei", Times, serif;
+    font-size:12px;
+    text-align:center;
+}
+ul
+{
+     margin-top:-5px;	 
+}	
+li
+{
+    float:left;	
+    width:360px;
+    text-align:center;
+    list-style-type: none;
+    margin-top:60px;
+    color:white;
+}
+a
+{
+	color:#3F2C1C;
+    text-decoration:none; 
+}
+a:hover
+{
+	color:#FF9966;	 
+}
+h1
+{
+	color:#AF8864;
+	font-size: 68px;
+}
+h3
+{
+	color:#EA7B59;	
+    font-size: 24px;
+}
+p
+{
+	font-size: 18px;
+}
+div#text1
+{
+	float:left;
+	margin-top: 100px;
+	margin-left: 810px;
+}
+div#text2
+{
+	float:left;
+	margin-top: -77px;
+	margin-left: 810px;
+}
+div#text3
+{
+	float:left;
+	margin-top: -50px;
+	margin-left: 810px;
+}
+</style>
+
+
+</head>
+<body onload = "load();">
+<script type="text/javascript">
+
+var opacity=0.2;
+var intervalID;
+
+function load()
+{
+    //document.getElementById("bgMusic").src = "piano.mp3";
+    //document.getElementById("voi").play();
+    document.getElementById("menu").style.opacity = opacity;
+    document.getElementById("text1").style.opacity = opacity;
+    document.getElementById("text2").style.opacity = opacity;
+    //document.getElementById("text3").style.opacity = opacity;
+    intervalID = setInterval("fadeIn();",100);
+}
+function fadeIn()
+{
+    opacity+=0.035;
+    document.getElementById("menu").style.opacity = opacity;
+    document.getElementById("text1").style.opacity = opacity;
+    document.getElementById("text2").style.opacity = opacity;
+    //document.getElementById("text3").style.opacity = opacity;
+    if(opacity>=1)
+    {
+        intervalID = clearInterval();
+    }
+}
+</script>	
+<div id="all">
+	<div id="banner">
+		<div id="text1">
+		     <h3>盲友守護神——</h3>
+		</div>
+		<div id="text2">
+		     <h1>導盲犬</h1>
+		</div>
+		<div id="text3">
+		     <p>
+		     盲人看不見光明<br>
+             卻有個溫暖的小太陽常伴身旁<br>
+             帶著他們穿梭在行人之間，引領他們安全抵達終點<br>
+             並在寂寞時為他們帶來溫暖與希望<br>
+             </p>
+             <p>
+             牠們是導盲犬，盲人的第二隻眼，工作時認真盡責、下班時活潑可愛<br>
+             牠們的日常生活都在做些什麼呢？訓練過程是否非常辛苦？<br>
+             任何犬種都適合擔任導盲犬嗎？家人有導盲犬需求又該如何申請？<br>
+             </p>
+             <p>
+             想知道這些問題的答案嗎？<br>
+             趕緊點選下列資訊，和我們一起認識導盲犬！	
+             </p>
+		</div>
+    </div>
+    <div id="menu">
+    	<ul>
+            <li><a href="https://www.youtube.com/watch?v=TpP3GNkVJj0&feature=youtu.be"
+            	   title="先看看導盲犬動畫吧"
+            	   target="_blank"><b><h2>導盲犬動畫</h2></b></a></li>
+            <li><a href="ebook/introduction.htm"
+                   title="深入了解導盲犬"
+                   target="_blank"><b><h2>導盲犬手冊</h2></b></a></li>
+            <li><a href="https://scratch.mit.edu/projects/339334651"
+            	   title="到Scratch玩遊戲吧"
+            	   target="_blank"><b><h2>導盲犬遊戲</h2></b></a></li>
+            <li><a href="http://www.guidedog.org.tw/" 
+            	   title="台灣導盲犬協會" 
+            	   target="_blank"><b><h2>相關網站</b></a></li>     
+        </ul>
+    </div>
+    <div id="footer">
+    	<br>課程:數位互動教具設計
+    	<br>製作:學習與媒材設計學系110級 導盲犬小組
+    </div>
+    <div>
+        <audio autoplay id="voi" preload = "auto" src = "piano.mp3" ></audio>
+    </div>
+</div>
+		
+</body>
+</html>
